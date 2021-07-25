@@ -36,7 +36,7 @@ public class UserAccessProvider
 
 ```
 
-The code on line 12 will work quickly with multiple users, but with millions of users, the performance will be much worse because the List data structure only supports linear searches. It gets worse if the HasAccessmethod is called many times because the complexity will be O(n²).
+The code on line 12 will work quickly with multiple users, but with millions of users, the performance will be much worse because **the List data structure only supports linear searches**. It gets worse if the HasAccessmethod is called many times because the complexity will be O(n²).
 
 One solution in this case would be to use a HashSet data structure that performs searches in constant time.
 

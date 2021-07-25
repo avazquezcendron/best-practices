@@ -11,9 +11,12 @@ Repo to take note of the concepts, principles and best practices I've learned (a
 - [Database change management](#database-change-management)
 - [CI & CD](#ci-and-cd)
 - [Code Quality](#code-quality)
-- [Trade-off Analysis](#trade-off-analysis)
 - [Performance](#performance)
 - [Analysis Before Coding](#analysis-before-coding)
+  - [Analyzing requirements](#analyzing-requirements)
+  - [Analyzing the design](#analyzing-the-design)
+    - [Trade-off Analysis](#trade-off-analysis)
+  - [Analyzing the area of impact](#analyzing-the-area-of-impact)
 
 ## Third-party Libraries Usage 
 
@@ -120,17 +123,7 @@ Repo to take note of the concepts, principles and best practices I've learned (a
 
 [Back to Index 👆](#index "Go to Index")
 
-## Trade-off Analysis
 
-Software engineering is a vast and complex topic, so usually almost every problem has several approaches that you take to solve it. For example, there are at least [5 ways to clone an object](https://levelup.gitconnected.com/5-ways-to-clone-an-object-in-c-d1374ec28efa) or [5 ways to implement a repository pattern in C#](https://levelup.gitconnected.com/5-ways-to-implement-repository-pattern-in-c-e12565e4d4a2).
-
-While each of the few available approaches can solve a coding problem, you should not just pick one at random or the most fancy one. You should perform a trade-off analysis because it is the only reliable way to find the best solution for a given problem.
-
-[See more details and examples](./examples/Trade-off%20Analysis/README.md)
-
-</br>
-
-[Back to Index 👆](#index "Go to Index")
 
 ## Performance
 
@@ -169,11 +162,25 @@ You should ensure that the business requirements stated in the ticket make sense
 
 At this stage, you should decide on interfaces, design patterns, integration points of the planned functionality. The larger the functionality, the higher the cost of a mistake made at this stage. Trade-off analysis helps here, because usually a couple of options are available during the design phase, not just one.
 
+#### Trade-off Analysis
+
+Software engineering is a vast and complex topic, so usually almost every problem has several approaches that you take to solve it. For example, there are at least [5 ways to clone an object](https://levelup.gitconnected.com/5-ways-to-clone-an-object-in-c-d1374ec28efa) or [5 ways to implement a repository pattern in C#](https://levelup.gitconnected.com/5-ways-to-implement-repository-pattern-in-c-e12565e4d4a2).
+
+While each of the few available approaches can solve a coding problem, you should not just pick one at random or the most fancy one. You should perform a trade-off analysis because it is the only reliable way to find the best solution for a given problem.
+
+After all the approaches have been identified with pros and cons, it will be much easier to choose the only one without hesitation.
+
+Regular trade-off analysis is what will make you a very confident and experienced software engineer, because this approach will require you to look at the problem from different angles.
+
+[See more details and examples](./examples/Trade-off%20Analysis/README.md)
+
 #### Analyzing the area of impact
 
 Any change to existing code can break other functionality. These are called regression issues. Good engineers usually follow the strategy on how to minimize the risk of regression issues by performing an analysis of the area of impact.
 
 In short, you should find outgoing dependencies (other classes) of the class you are about to modify. The behavior of any outgoing dependency can be affected by your change. After collecting outgoing dependencies, you should understand what functionality of the system they refer to. Then pass the list of functionality to QA engineers, so they can perform a regression testing of all potentially affected locations in the application.
+
+
 </br>
 
 [Back to Index 👆](#index "Go to Index")
